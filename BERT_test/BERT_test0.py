@@ -34,3 +34,16 @@ print(ner_results)
 print("=== Named Entity Recognition (NER) 결과 ===")
 for entity in ner_results:
     print(f"Entity: {entity['word']}, Label: {entity['entity']}")
+
+'''
+=== Named Entity Recognition (NER) 결과 ===
+Entity: cambrian, Label: B-GeoTime
+Entity: china, Label: I-GeoLoc
+Entity: australia, Label: B-GeoLoc
+Entity: ##sl, Label: B-GeoPetro
+Entity: canada, Label: I-GeoLoc
+Entity: columbia, Label: B-GeoLoc
+Entity: usa, Label: B-GeoLoc
+Entity: alabama, Label: B-GeoLoc
+Entity: texas, Label: B-GeoLoc
+'''
