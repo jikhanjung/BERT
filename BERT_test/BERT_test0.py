@@ -8,7 +8,7 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForTokenClassification.from_pretrained(MODEL_NAME, from_tf=True)
 
 # NER 파이프라인 정의
-ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
+ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer)#, aggregation_strategy="simple")
 
 # 예제 문장
 text = """
@@ -26,6 +26,9 @@ Texas), Aphelaspis Zone.
 
 # GeoBERT NER 실행
 ner_results = ner_pipeline(text)
+
+print("=== Raw NER Output ===")
+print(ner_results)
 
 # 결과 출력
 print("=== Named Entity Recognition (NER) 결과 ===")
